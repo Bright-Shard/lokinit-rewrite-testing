@@ -1,0 +1,18 @@
+[package]
+name = "lokinit"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[features]
+default = ["wayland"]
+wayland = []
+x11 = []
+
+[[example]]
+name = "skia"
+
+[dev-dependencies]
+
+[dependencies]
