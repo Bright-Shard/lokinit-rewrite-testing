@@ -78,7 +78,8 @@ macro_rules! library {
 
         impl $lib {
             pub fn new() -> Result<Self, $crate::native::linux::dl::LoadingError> {
-                let lib = Library::new($name).map_err($crate::native::linux::dl::LoadingError::Library)?;
+                let lib = $crate::native::linux::dl::Library::new($name)
+                    .map_err($crate::native::linux::dl::LoadingError::Library)?;
 
                 Ok(Self {
                     $($fn: lib.get_sym(stringify!($fn)).map_err($crate::native::linux::dl::LoadingError::Symbol)?,)*

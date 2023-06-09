@@ -1,6 +1,5 @@
 use crate::library;
 
-use super::dl::Library;
 use std::{
     ffi::{c_char, c_void},
 };
