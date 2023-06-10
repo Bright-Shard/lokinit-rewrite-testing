@@ -74,6 +74,7 @@ public class MacosView: NSView {
         rust_mouse_callback(MouseButton.Middle, MouseEvent.Pressed, point.0, point.1)
     }
 
+    // Mouse up events
     override public func mouseUp(with event: NSEvent) {
         let point = self.translateMousePoint(event.locationInWindow)
         rust_mouse_callback(MouseButton.Left, MouseEvent.Released, point.0, point.1)
@@ -87,6 +88,7 @@ public class MacosView: NSView {
         rust_mouse_callback(MouseButton.Middle, MouseEvent.Released, point.0, point.1)
     }
 
+    // Mouse dragged events
     override public func mouseDragged(with event: NSEvent) {
         let point = self.translateMousePoint(event.locationInWindow)
         rust_mouse_callback(MouseButton.Left, MouseEvent.Moved, point.0, point.1)
