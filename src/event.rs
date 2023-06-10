@@ -18,6 +18,8 @@ pub enum Event {
     Mouse(MouseEvent),
     Touch(TouchEvent),
 
+    Redraw,
+
     FocusIn,
     FocusOut,
 }
