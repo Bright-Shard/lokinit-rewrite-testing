@@ -9,7 +9,7 @@ fn main() {
     let project_root = env::var("CARGO_MANIFEST_DIR").unwrap();
     let is_release_mode = env::var("PROFILE").unwrap() == "release";
 
-    let library_path = project_root + "/" + LIBRARY_NAME;
+    let library_path = project_root + "/swift/" + LIBRARY_NAME;
     let bridging_header_path =
         library_path.to_string() + "/Sources/" + LIBRARY_NAME + "/bridging-header.h";
     let swift_build_path =
