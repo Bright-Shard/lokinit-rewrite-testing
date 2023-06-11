@@ -70,7 +70,7 @@ impl Library {
 macro_rules! library {
     (
         [ $lib:ident <-> $name:literal ] ;
-        $( fn $fn:ident ( $( $arg:ident : $t:ty ),* ) $(-> $res:ty)? );* ;
+        $( pub fn $fn:ident ( $( $arg:ident : $t:ty ),* ) $(-> $res:ty)? );* ;
     ) => {
         pub struct $lib {
             $(pub $fn: unsafe fn($($arg: $t),*)$( -> $res)?,)*

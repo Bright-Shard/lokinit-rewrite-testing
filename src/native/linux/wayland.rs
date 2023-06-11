@@ -7,6 +7,6 @@ use std::{
 library! {
     [LibWaylandClient <-> "wayland-client"];
 
-    fn wl_display_connect(what: *const c_char) -> *mut c_void;
-    fn wl_display_disconnect(what: *mut c_void);
+    pub fn wl_display_connect(what: *const c_char) -> *mut c_void;
+    pub fn wl_display_disconnect(what: *mut c_void);
 }

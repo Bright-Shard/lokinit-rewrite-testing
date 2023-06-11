@@ -1,11 +1,12 @@
-mod app;
+pub mod core;
 pub mod event;
 pub mod keycode;
 mod native;
-mod window;
+pub mod window;
 
 pub mod prelude {
-    pub use crate::app::App;
-    pub use crate::event::{Event, MouseButton};
-    pub use crate::window::Window;
+    pub use crate::core::{LokinitCore, Monitor, MonitorId};
+    pub use crate::event::{Event, KeyboardEvent, MouseButton, MouseEvent, TouchEvent, TouchPhase};
+    pub use crate::keycode::KeyCode;
+    pub use crate::window::{WindowBuilder, WindowHandle, WindowPos, WindowSize};
 }
